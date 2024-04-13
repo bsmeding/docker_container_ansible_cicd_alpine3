@@ -42,7 +42,6 @@ RUN mkdir -p /etc/ansible
 RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 
 # Set working directory
-RUN mkdir -p /ansible
-WORKDIR /ansible
 
+VOLUME ["/sys/fs/cgroup"]
 CMD [ "ansible-playbook", "--version" ]
