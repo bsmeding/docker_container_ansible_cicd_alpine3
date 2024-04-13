@@ -1,4 +1,4 @@
-FROM alpine:3.19-stable
+FROM alpine:3.19
 LABEL maintainer="Bart Smeding"
 ENV container=docker
 
