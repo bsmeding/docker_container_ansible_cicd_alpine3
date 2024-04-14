@@ -44,4 +44,5 @@ RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 # Set working directory
 
 VOLUME ["/sys/fs/cgroup"]
-CMD [ "ansible-playbook", "--version" ]
+ENTRYPOINT []
+CMD ["ansible", "--help"]
