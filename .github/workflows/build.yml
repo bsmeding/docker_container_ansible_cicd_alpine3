@@ -51,6 +51,12 @@
               source: ${{ github.repository  }}
               find: 'docker_container_' 
               replace: ''
+          - name: Docker Hub Description
+            uses: peter-evans/dockerhub-description@v4
+            with:
+              username: ${{ secrets.DOCKERHUB_USERNAME }}
+              password: ${{ secrets.DOCKERHUB_TOKEN }}
+              repository: ${{ steps.findandreplace.outputs.value }}
           - name: Build and push image.
             uses: docker/build-push-action@v5
             with:
