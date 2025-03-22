@@ -2,7 +2,7 @@ FROM alpine:3.19
 LABEL maintainer="Bart Smeding"
 ENV container=docker
 
-ENV pip_packages "ansible yamllint jmespath"
+ENV pip_packages "ansible yamllint pynautobot pynetbox jmespath netaddr"
 
 # Install requirements
 RUN apk --no-cache add \
