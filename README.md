@@ -3,6 +3,9 @@ Docker image for Ansible CiCd pipelines based on Alpine 3
 
 ## Installed packages
 
-* ansible-core
+* ansible == 11.1.0
 * yamllint
 * jmespath
+* pynautobot
+* pynetbox
+* netaddr
